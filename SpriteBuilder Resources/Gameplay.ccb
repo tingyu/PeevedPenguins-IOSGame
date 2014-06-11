@@ -215,6 +215,10 @@
 									<key>points</key>
 									<array>
 										<array>
+											<real>-0.613250732421875</real>
+											<real>181.58203125</real>
+										</array>
+										<array>
 											<real>0.13671875</real>
 											<real>-6.2578125</real>
 										</array>
@@ -223,16 +227,12 @@
 											<real>-6.21484375</real>
 										</array>
 										<array>
-											<real>38.335906982421875</real>
-											<real>107.640625</real>
+											<real>44.183624267578125</real>
+											<real>108.08984375</real>
 										</array>
 										<array>
-											<real>43.47265625</real>
-											<real>177.3515625</real>
-										</array>
-										<array>
-											<real>0.359375</real>
-											<real>178.921875</real>
+											<real>44.527374267578125</real>
+											<real>181.19140625</real>
 										</array>
 									</array>
 								</dict>
@@ -309,6 +309,8 @@
 										</array>
 									</dict>
 								</array>
+								<key>selected</key>
+								<true/>
 							</dict>
 							<dict>
 								<key>baseClass</key>
@@ -666,7 +668,7 @@
 									<key>bodyShape</key>
 									<integer>1</integer>
 									<key>cornerRadius</key>
-									<real>16</real>
+									<real>0.0</real>
 									<key>density</key>
 									<real>1</real>
 									<key>dynamic</key>
@@ -745,8 +747,6 @@
 										</array>
 									</dict>
 								</array>
-								<key>selected</key>
-								<true/>
 							</dict>
 						</array>
 						<key>customClass</key>
