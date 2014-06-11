@@ -194,6 +194,48 @@
 								<string>_catapultArm</string>
 								<key>memberVarAssignmentType</key>
 								<integer>1</integer>
+								<key>physicsBody</key>
+								<dict>
+									<key>affectedByGravity</key>
+									<true/>
+									<key>allowsRotation</key>
+									<true/>
+									<key>bodyShape</key>
+									<integer>0</integer>
+									<key>cornerRadius</key>
+									<real>0.0</real>
+									<key>density</key>
+									<real>1</real>
+									<key>dynamic</key>
+									<true/>
+									<key>elasticity</key>
+									<real>0.30000001192092896</real>
+									<key>friction</key>
+									<real>0.30000001192092896</real>
+									<key>points</key>
+									<array>
+										<array>
+											<real>0.13671875</real>
+											<real>-6.2578125</real>
+										</array>
+										<array>
+											<real>16.6796875</real>
+											<real>-6.21484375</real>
+										</array>
+										<array>
+											<real>38.335906982421875</real>
+											<real>107.640625</real>
+										</array>
+										<array>
+											<real>43.47265625</real>
+											<real>177.3515625</real>
+										</array>
+										<array>
+											<real>0.359375</real>
+											<real>178.921875</real>
+										</array>
+									</array>
+								</dict>
 								<key>properties</key>
 								<array>
 									<dict>
@@ -211,8 +253,8 @@
 										<string>Position</string>
 										<key>value</key>
 										<array>
-											<real>291</real>
-											<real>180</real>
+											<real>226</real>
+											<real>97</real>
 											<integer>0</integer>
 											<integer>0</integer>
 											<integer>0</integer>
@@ -225,8 +267,8 @@
 										<string>Point</string>
 										<key>value</key>
 										<array>
-											<real>1.7860863208770752</real>
-											<real>0.47912251949310303</real>
+											<real>0.21791368722915649</real>
+											<real>0.018957441672682762</real>
 										</array>
 									</dict>
 									<dict>
@@ -278,9 +320,55 @@
 								<key>displayName</key>
 								<string>catapult</string>
 								<key>memberVarAssignmentName</key>
-								<string></string>
+								<string>_catapult</string>
 								<key>memberVarAssignmentType</key>
-								<integer>0</integer>
+								<integer>1</integer>
+								<key>physicsBody</key>
+								<dict>
+									<key>affectedByGravity</key>
+									<true/>
+									<key>allowsRotation</key>
+									<true/>
+									<key>bodyShape</key>
+									<integer>0</integer>
+									<key>cornerRadius</key>
+									<real>0.0</real>
+									<key>density</key>
+									<real>1</real>
+									<key>dynamic</key>
+									<false/>
+									<key>elasticity</key>
+									<real>0.30000001192092896</real>
+									<key>friction</key>
+									<real>0.30000001192092896</real>
+									<key>points</key>
+									<array>
+										<array>
+											<real>3.25</real>
+											<real>40.01171875</real>
+										</array>
+										<array>
+											<real>20.222640991210938</real>
+											<real>13.6640625</real>
+										</array>
+										<array>
+											<real>220.59762573242188</real>
+											<real>23.67578125</real>
+										</array>
+										<array>
+											<real>206.83200073242188</real>
+											<real>40.58203125</real>
+										</array>
+										<array>
+											<real>151.44137573242188</real>
+											<real>58.63671875</real>
+										</array>
+										<array>
+											<real>80.4921875</real>
+											<real>77.5390625</real>
+										</array>
+									</array>
+								</dict>
 								<key>properties</key>
 								<array>
 									<dict>
@@ -556,6 +644,110 @@
 									</dict>
 								</array>
 							</dict>
+							<dict>
+								<key>baseClass</key>
+								<string>CCNode</string>
+								<key>children</key>
+								<array/>
+								<key>customClass</key>
+								<string></string>
+								<key>displayName</key>
+								<string>CCNode</string>
+								<key>memberVarAssignmentName</key>
+								<string>_pullbackNode</string>
+								<key>memberVarAssignmentType</key>
+								<integer>1</integer>
+								<key>physicsBody</key>
+								<dict>
+									<key>affectedByGravity</key>
+									<true/>
+									<key>allowsRotation</key>
+									<true/>
+									<key>bodyShape</key>
+									<integer>1</integer>
+									<key>cornerRadius</key>
+									<real>16</real>
+									<key>density</key>
+									<real>1</real>
+									<key>dynamic</key>
+									<false/>
+									<key>elasticity</key>
+									<real>0.30000001192092896</real>
+									<key>friction</key>
+									<real>0.30000001192092896</real>
+									<key>points</key>
+									<array>
+										<array>
+											<real>0.0</real>
+											<real>0.0</real>
+										</array>
+									</array>
+								</dict>
+								<key>properties</key>
+								<array>
+									<dict>
+										<key>name</key>
+										<string>name</string>
+										<key>type</key>
+										<string>StringSimple</string>
+										<key>value</key>
+										<string></string>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>position</string>
+										<key>type</key>
+										<string>Position</string>
+										<key>value</key>
+										<array>
+											<real>224</real>
+											<real>302</real>
+											<integer>0</integer>
+											<integer>0</integer>
+											<integer>0</integer>
+										</array>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>contentSize</string>
+										<key>type</key>
+										<string>Size</string>
+										<key>value</key>
+										<array>
+											<real>0.0</real>
+											<real>0.0</real>
+											<integer>0</integer>
+											<integer>0</integer>
+										</array>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>anchorPoint</string>
+										<key>type</key>
+										<string>Point</string>
+										<key>value</key>
+										<array>
+											<real>0.0</real>
+											<real>0.0</real>
+										</array>
+									</dict>
+									<dict>
+										<key>name</key>
+										<string>scale</string>
+										<key>type</key>
+										<string>ScaleLock</string>
+										<key>value</key>
+										<array>
+											<real>1</real>
+											<real>1</real>
+											<false/>
+											<integer>0</integer>
+										</array>
+									</dict>
+								</array>
+								<key>selected</key>
+								<true/>
+							</dict>
 						</array>
 						<key>customClass</key>
 						<string></string>
@@ -718,8 +910,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>baseClass</key>

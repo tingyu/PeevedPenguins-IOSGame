@@ -14,6 +14,10 @@
     CCNode *_catapultArm;
     CCNode *_levelNode;
     CCNode *_contentNode;
+    CCNode *_catapult;
+    CCNode *_pullbackNode;
+    CCPhysicsJoint *_catapultJoint;
+    CCPhysicsJoint *_pullbackJoint;
 }
 // is called when CCB file has completed loading
 - (void)didLoadFromCCB {
@@ -21,6 +25,16 @@
     self.userInteractionEnabled = TRUE;
     CCScene *level = [CCBReader loadAsScene:@"Levels/Level1"];
     [_levelNode addChild:level];
+    
+    // visualize physics bodies & joints
+    _physicsNode.debugDraw = TRUE;
+    
+    // catapultArm and catapult shall not collide
+    [_catapultArm.physicsBody setCollisionGroup:_catapult];
+    [_catapult.physicsBody setCollisionGroup:_catapult];
+    
+    // create a joint to connect the catapult arm with the catapult
+    _catapultJoint = [CCPhysicsJoint connectedPivotJointWithBodyA:_catapultArm.physicsBody bodyB:_catapult.physicsBody anchorA:_catapultArm.anchorPointInPoints];
 }
 
 // called on every touch in this scene
@@ -47,7 +61,10 @@
     CCActionFollow *follow = [CCActionFollow actionWithTarget:penguin worldBoundary:self.boundingBox];
     [_contentNode runAction:follow];
 
-
+    // nothing shall collide with our invisible nodes
+    _pullbackNode.physicsBody.collisionMask = @[];
+    // create a spring joint for bringing arm in upright position and snapping back when player shoots
+    _pullbackJoint = [CCPhysicsJoint connectedSpringJointWithBodyA:_pullbackNode.physicsBody bodyB:_catapultArm.physicsBody anchorA:ccp(0, 0) anchorB:ccp(34, 138) restLength:60.f stiffness:500.f damping:40.f];
 }
 
 - (void)retry {
