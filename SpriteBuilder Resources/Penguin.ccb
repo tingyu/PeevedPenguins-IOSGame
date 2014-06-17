@@ -41,7 +41,7 @@
 			<key>bodyShape</key>
 			<integer>1</integer>
 			<key>cornerRadius</key>
-			<real>16</real>
+			<real>13</real>
 			<key>density</key>
 			<real>25</real>
 			<key>dynamic</key>

@@ -39,7 +39,7 @@ static const float MIN_SPEED = 5.f;
     [_levelNode addChild:level];
     
     // visualize physics bodies & joints
-    _physicsNode.debugDraw = TRUE;
+    //_physicsNode.debugDraw = TRUE;
     
     // catapultArm and catapult shall not collide
     [_catapultArm.physicsBody setCollisionGroup:_catapult];
@@ -113,9 +113,11 @@ static const float MIN_SPEED = 5.f;
         // follow the flying penguin
         _followPenguin = [CCActionFollow actionWithTarget:_currentPenguin worldBoundary:self.boundingBox];
         [_contentNode runAction:_followPenguin];
+        
+        _currentPenguin.launched = TRUE;
+
     }
     
-    _currentPenguin.launched = TRUE;
 }
 
 -(void) touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
@@ -158,17 +160,17 @@ static const float MIN_SPEED = 5.f;
 }
 
 
--(void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA wildcard:(CCNode *)nodeB
-{
+- (void)ccPhysicsCollisionPostSolve:(CCPhysicsCollisionPair *)pair seal:(CCNode *)nodeA wildcard:(CCNode *)nodeB {
     CCLOG(@"Something collided with a seal!");
+
     float energy = [pair totalKineticEnergy];
     
     // if energy is large enough, remove the seal
-    if (energy > 5000.f)
-    {
+    if (energy > 5000.f) {
         [self sealRemoved:nodeA];
     }
 }
+
 
 - (void)sealRemoved:(CCNode *)seal {
     // load particle effect
